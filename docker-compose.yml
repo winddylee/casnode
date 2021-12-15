@@ -1,4 +1,4 @@
-version: '3.1'
+version: '3.5'
 services:
   casnode:
     build:
@@ -6,16 +6,9 @@ services:
       dockerfile: Dockerfile
     ports:
       - "7000:7000"
-    depends_on:
-      - db
     volumes:
       - ./conf:/conf/
-  db:
-    restart: always
-    image: mysql:8.0.25
-    ports:
-      - "3306:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: 123
-    volumes:
-      - /usr/local/docker/mysqls:/var/lib/mysql
+networks:
+  my-proxy-net:
+    external:
+      name: custom_network
