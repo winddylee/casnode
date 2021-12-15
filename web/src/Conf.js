@@ -15,10 +15,10 @@ import * as ConfBackend from "./backend/ConfBackend.js";
 
 export const AuthConfig = {
   // serverUrl: "https://door.casbin.com",
-  serverUrl: "http://localhost:7001",
-  clientId: "014ae4bd048734ca2dea",
-  organizationName: "casbin",
-  appName: "app-casnode",
+  serverUrl: "https://bbs.winddy.club/",
+  clientId: "5374cb066d9838135a1b",
+  organizationName: "winddy",
+  appName: "winddy-app",
   redirectPath: "/callback",
 };
 
