@@ -9,6 +9,6 @@ services:
     volumes:
       - ./conf:/conf/
 networks:
-  my-proxy-net:
-    external:
-      name: custom_network
+  default:
+    external: true
+    name: casdoor_default
