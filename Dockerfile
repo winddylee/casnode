@@ -12,6 +12,7 @@ RUN yarn install && yarn run build
 
 FROM alpine:latest
 RUN sed -i 's/https/http/' /etc/apk/repositories
+RUN set -eux && sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 RUN apk add curl
 LABEL MAINTAINER="https://casnode.org/"
 
