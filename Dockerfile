@@ -1,6 +1,8 @@
 FROM golang:1.17 AS BACK
 WORKDIR /go/src/casnode
 COPY . .
+RUN sed -i s@/deb.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list
+RUN sed -i s@/security.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOPROXY=https://goproxy.cn,direct go build -ldflags="-w -s" -o server . \
     && apt update && apt install wait-for-it && chmod +x /usr/bin/wait-for-it
 

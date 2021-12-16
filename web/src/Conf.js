@@ -15,7 +15,7 @@ import * as ConfBackend from "./backend/ConfBackend.js";
 
 export const AuthConfig = {
   // serverUrl: "https://door.casbin.com",
-  serverUrl: "https://winddy.club/",
+  serverUrl: "https://winddy.club",
   clientId: "5374cb066d9838135a1b",
   organizationName: "winddy",
   appName: "winddy-app",
