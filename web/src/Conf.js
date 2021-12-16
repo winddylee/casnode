@@ -18,7 +18,7 @@ export const AuthConfig = {
   serverUrl: "https://winddy.club",
   clientId: "5374cb066d9838135a1b",
   organizationName: "winddy",
-  appName: "winddy-app",
+  appName: "forum",
   redirectPath: "/callback",
 };
 
